@@ -1,0 +1,28 @@
+{% extends 'base.html' %}  
+{% block content %}  
+
+<header class="jumbotron">
+<h1>Welcome to places....</h1>
+<p>View our handpicked places</p>
+<p>
+	<a class="btn btn-dark btn-lg" href="/new/">Add new place</a>   
+</p>
+</header>
+
+<div class = "container">
+	<div class="row text-center" style="display:flex; flex-wrap:wrap">
+		{% for place in places %}
+			<div class="col-md-3 col-sm-6 pb-3">
+				<a href="/{{ place.id }}" class="card">
+					<img class="card-img-top" src="/media/{{ place.images }}">
+					<div class="card-body">
+						<h5 class="card-title" style="color:black">{{ place.name }}</h5>
+						<p class="card-text" style="color:black">{{ place.description }}</p>
+					</div>
+				</a>			
+			</div>		
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}
