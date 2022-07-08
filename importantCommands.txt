@@ -1,0 +1,23 @@
+initial commends :-
+cd Documents
+source PlaceAppPythonEnv/bin/activate
+cd Places
+python manage.py runsslserver
+
+https://localhost:8000
+
+to start project :-
+django-admin startproject <ProjectName>
+
+to start app :-
+python manage.py startapp <AppName>
+
+to create and run virtual environment :-
+python3 -m pip install --user virtualenv
+python3 -m venv <EnvironmentName>
+source <EnvironmentName>/bin/activate
+deactivate
+
+
+GitHub link for python environment of this project :- 
+https://github.com/inder128/extras/tree/master/PlaceAppPythonEnv
